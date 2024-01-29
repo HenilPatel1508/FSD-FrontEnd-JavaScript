@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" align="center">
+        <thead>
+            <th>Image</th>
+        </thead>
+        <tbody id="mydata"></tbody>
+    </table>
+</body>
+</html>
+<script>
+    fetch('https://dog.ceo/api/breeds/image/random/5')
+    .then((res)=>res.json())
+    .then((Response)=>{
+        // console.log(Response.message[0]);
+        DATA =`
+            <tr>
+                <td><img src=${Response.message[0]}></td>    
+            </tr>
+        `
+        document.querySelector('#mydata').innerHTML = DATA
+    }).catch((Error)=>{
+        console.log(Error);
+    })
+</script>

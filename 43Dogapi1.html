@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 500px;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://images.dog.ceo/breeds/tervuren/shadow_and_lake.jpg" alt="" id="myimg">
+    <br>
+    <button>Click to Change</button>
+</body>
+</html>
+<script>
+document.querySelector('button').addEventListener('click',function(){
+    fetch('https://dog.ceo/api/breeds/image/random')
+    .then((res)=>res.json())
+    .then((Response)=>{
+        console.log(Response);
+        myimg.src = Response['message']
+    }).catch((Error)=>{
+        console.log(Error);
+    })
+})
+</script>

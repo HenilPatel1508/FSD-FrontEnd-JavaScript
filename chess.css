@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color:#A0C49D;
+    float: left;
+}
+
+
+.box2{
+    width: 200px;
+    height: 200px;
+    background-color:#F7FFE5;
+    float: left;
+}
+
+.clearfix{
+    clear: both;
+}
+
+.center{
+    width: 1628px;
+    margin:0 auto;
+    font-size: 100px;
+    line-height: 200px ;
+    border: 14px solid rgb(102, 160, 149);
+    text-align: center;
+}

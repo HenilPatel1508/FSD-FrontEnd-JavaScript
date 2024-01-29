@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body{
+    background: rgb(218, 217, 240);
+    background: linear-gradient(337deg, rgb(69, 68, 96) 0%, rgb(190, 190, 249) 13%, rgb(59, 92, 99) 100%);
+    background-repeat: no-repeat;
+    height: 639px;
+  }
+  .main-table{
+    border: 1px solid black;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 100px;
+  }
+  .main-button-1{
+    width: 100%;
+    padding: 20px 40px;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    border-radius: 9px;
+    margin-top: 5px;
+    box-shadow:  0 8px 16px 0 rgb(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  .text-box{
+    padding: 20px 40px;
+    font-weight: bold;
+    font-size: 24px;
+    border: 2px solid black;
+    background-color: rgb(132, 234, 255);
+    color: black;
+    border-radius: 5px;
+    box-shadow:  0 8px 16px 0 rgb(132, 234, 255, 0.2), 0 6px 20px 0 rgb(132, 234, 255,0.19);
+    text-align: right;
+  }

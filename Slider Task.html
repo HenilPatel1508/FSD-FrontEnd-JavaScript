@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .slider {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: 550px;
+        }
+
+        .main {
+            position: relative;
+        }
+
+        .btn-1 {
+            position: absolute;
+            top: 40%;
+            padding: 30px;
+            border: none;
+            background: transparent;
+            color: white;
+            font-size: 45px;
+        }
+
+        .btn-2 {
+            position: absolute;
+            right: 9px;
+            top: 40%;
+            padding: 30px;
+            border: none;
+            background: transparent;
+            color: white;
+            font-size: 45px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="slider">
+            <img src="IMG/img.jpg" alt="">
+        </div>
+        <div class="slider">
+            <img src="IMG/img2.jpg" alt="">
+        </div>
+        <div class="slider">
+            <img src="IMG/img3.jpg" alt="">
+        </div>
+    </div>
+    <button class="btn-1"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="btn-2"><i class="fa-solid fa-chevron-right"></i></button>
+</body>
+
+</html>
+<script>
+    let currentslide = 1;
+    displayslide(currentslide)
+
+    //for automatic scrolling
+    function setslides(num) {
+        setInterval(() => {
+            displayslide(currentslide += num)
+        }, 6000);
+    }
+
+    window.onload = function () {
+        setslides(1)
+    }
+
+    //for button click
+
+    document.querySelector('.btn-1').addEventListener('click', function () {
+        displayslide(currentslide += 1)
+    })
+    document.querySelector('.btn-2').addEventListener('click', function () {
+        displayslide(currentslide += -1)
+    })
+
+    function displayslide(num) {
+        let slides = document.getElementsByClassName("slider")
+
+        if (num > slides.length) {
+            currentslide = 1
+        }
+        if (num < 1) {
+            currentslide = slides.length
+        }
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none"
+        }
+        slides[currentslide - 1].style.display = "block"
+    }
+</script>

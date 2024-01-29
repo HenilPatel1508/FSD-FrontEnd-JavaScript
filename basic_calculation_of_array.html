@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let sum = "+";
+    let subtract = "-";
+    let multiply = "*";
+    let divide = "/";
+    let operator = prompt("Select operator");
+
+
+    function showResult(Result){
+        console.log(Result);
+        document.write(Result);
+        document.write("<br>");
+    }
+    let doSomething = function(num1, num2) {
+        if (operator == sum) {
+            showResult("The Calculation is: " + (num1 + num2));
+        } else if (operator == subtract) {
+            showResult("The Calculation is: " + (num1 - num2));
+        }  else if (operator == multiply) {
+            showResult("The Calculation is: " + (num1 * num2));
+        }  else if (operator == divide) {
+            showResult("The Calculation is: " + (num1 / num2));
+        } else {
+          console.log("No Condition reached");
+        }
+     }
+        doSomething(parseInt (prompt("Enter first Value: ")) ,  parseInt (prompt("Enter second Value: ")));
+</script>

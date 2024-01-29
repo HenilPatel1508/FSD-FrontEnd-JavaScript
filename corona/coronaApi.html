@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="corona.js"></script>
+</head>
+<body>
+    <table border="1" align="center">
+        <tr>
+            <th colspan="9" style="font-size: 20px;">State_Wise_Daily(CORONA REPORT)</th>
+        </tr>
+            <th>Date</th>
+            <th>Dateymd</th>
+            <th>Status</th>
+            <th>TT</th>
+            <th>GJ</th>
+            <th>DL</th>
+            <th>RJ</th>
+            <th>MH</th>
+
+            <tbody id="detail"></tbody>
+    </table>
+</body>
+</html>
+<script>
+    console.log(data);
+
+    mydata = ""
+    data.forEach(ele=>{
+        mydata+=`
+            <tr>
+                
+                <td>${ele.date}</td>
+                <td>${ele.dateymd}</td>
+                <td>${ele.Status}</td>
+                <td>${ele.TT}</td>
+                <td>${ele.GJ}</td>
+                <td>${ele.DL}</td>
+                <td>${ele.RJ}</td>
+                <td>${ele.MH}</td>
+            </tr>        
+        `
+        document.querySelector('#detail').innerHTML = mydata
+    });
+</script>

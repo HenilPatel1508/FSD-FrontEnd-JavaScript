@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            /* background-color: rgb(95, 141, 160); */
+            font-family: 'Afacad', sans-serif;
+            font-family: 'Whisper', cursive;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        table{
+            padding: 20px;
+        }
+    </style>
+    <table border="1" align="center">
+        <thead>
+            <th>Id</th>
+            <th>Quotes</th>
+            <th>Price</th>
+        </thead>
+        <tbody id="task">
+
+        </tbody>
+    </table>
+    <!-- <h1 id="task" style="border: 2px solid black;"></h1> -->
+</body>
+</html>
+<script>
+    let data = [
+        {
+            "id":'1',
+            "quotes":"Self-belief",
+            "price":'3000',
+         
+        },
+
+        {
+            "id":'2',
+            "quotes":"and Hard Work",
+            "price":'3000',
+        },
+
+        {
+            "id":'3',
+            "quotes":"Will always earn",
+            "price":'3000',
+        },
+
+        {
+            "id":'4',
+            "quotes":"you success",
+            "price":'3000',
+        }
+    ]
+    // console.log(data);
+
+        HTMLDATA = ''
+
+    data.forEach(element => {
+            console.log(element);
+        
+        HTMLDATA+=`
+        <form>
+            <table>
+                <tr>
+                    <td>${element.id}</td>
+                    <td>${element.quotes}</td>  
+                    <td>${element.price}</td>  
+
+                </tr>
+            </table>
+        </form>
+        `});
+
+        document.getElementById('task').innerHTML = HTMLDATA;
+</script>

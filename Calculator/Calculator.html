@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="cal">
+        <div class="calculator">
+            <form>
+                <div class="display">
+                    <input type="text" name="display">
+                </div>
+                <div>
+                    <input type="button" class="calcu" value="AC" onclick="display.value = '' " style="background:seagreen; border: 2px solid;">
+                    <input type="button" class="calcu" value="DEL" onclick="display.value = display.value.toString().slice(0,-1)" style="background:seagreen ; border: 2px solid;">
+                    <input type="button" class="calcu" value="%" onclick="display.value += '%' " style="background:seagreen; border: 2px solid;">
+                    <input type="button" class="calcu" value="+" onclick="display.value += '+' " style="background: seagreen; border: 2px solid;">
+                </div>
+                <div>
+                    <input type="button" class="calcu" value="7" onclick="display.value += '7' " style="border: 2px solid;">
+                    <input type="button" class="calcu" value="8" onclick="display.value += '8' " style="border: 2px solid;">
+                    <input type="button" class="calcu" value="9" onclick="display.value += '9' " style="border: 2px solid;">
+                    <input type="button" class="calcu" value="-" onclick="display.value += '-' " style="background: seagreen; border: 2px solid;">
+                </div>
+                <div>
+                    <input type="button" class="calcu" value="4" onclick="display.value += '4' " style="border: 2px solid;">
+                    <input type="button" class="calcu" value="5" onclick="display.value += '5' " style="border: 2px solid;">
+                    <input type="button" class="calcu" value="6" onclick="display.value += '6' " style="border: 2px solid;">
+                    <input type="button" class="calcu" value="*" onclick="display.value += '*' " style="background: seagreen; border: 2px solid;">
+                </div>
+                <div>
+                    <input type="button" class="calcu" value="1" onclick="display.value += '1' " style="border: 2px solid;">
+                    <input type="button" class="calcu" value="2" onclick="display.value += '2' " style="border: 2px solid;">
+                    <input type="button" class="calcu" value="3" onclick="display.value += '3' " style="border: 2px solid;">
+                    <input type="button" class="calcu" value="/" onclick="display.value += '/' " style="background:seagreen; border: 2px solid;">
+                </div>
+                <div>
+                    <input type="button" class="calcu" value="00" onclick="display.value += '00' " style="border: 2px solid;">
+                    <input type="button" class="calcu" value="0" onclick="display.value += '0' " style="border: 2px solid;">
+                    <input type="button" class="calcu" value="." onclick="display.value += '.' " style="border: 2px solid;">
+                    <input type="button" class="calcu" value="=" onclick="display.value = eval(display.value)" style="background: seagreen; border: 2px solid;">
+                </div>      
+            </form>
+        </div>
+    </div>
+</body>
+</html>

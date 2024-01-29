@@ -1,0 +1,53 @@
+body{
+    background-color: #EDEFF9;
+}
+
+.cart{
+    padding: 10px;
+    /* background-color: black; */
+    color: aliceblue;
+}
+img{
+  height: 250px;
+  object-fit: fill;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 285px;
+  padding: 5px 5px;
+}
+img:hover{
+  transform:scale(1.03);
+  transition: 0.3s;
+}
+.main{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.card-title{
+  height: 33px;
+  border-bottom: 1px solid black;
+}
+.sho{
+  color: whitesmoke;
+  font-size: 25px;
+}
+.btn:hover{
+  background-color: lightslategray;
+  color: white;
+}
+.price{
+height: 35px;
+border-bottom: 1px solid black;
+}
+h5 span{
+margin-left: 120px;
+font-size: 18px;
+}
+.checked{
+color: orange;
+}
+.card{
+    border: solid black;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/JAVASCRIPT/style.css">
+</head>
+<body>
+  <table class="main-table">
+    <tr>
+      <td colspan="4">
+        <input type="text" class="text-box" id="final">
+      </td>
+    </tr>
+
+    <tr>
+      <td><input type="button" class="main-button-1" value="1" id="final" onclick="display('1')"></td>
+      <td><input type="button" class="main-button-1" value="2" id="final" onclick="display('2')"></td>
+      <td><input type="button" class="main-button-1" value="3" id="final" onclick="display('3')"></td>
+      <td><input type="button" class="main-button-1" value="/" id="final" onclick="display('/')"></td>
+    </tr>
+
+    <tr>
+      <td><input type="button" class="main-button-1" value="4" id="final" onclick="display('4')"></td>
+      <td><input type="button" class="main-button-1" value="5" id="final" onclick="display('5')"></td>
+      <td><input type="button" class="main-button-1" value="6" id="final" onclick="display('6')"></td>
+      <td><input type="button" class="main-button-1" value="*" id="final" onclick="display('*')"></td>
+    </tr>
+
+    <tr>
+      <td><input type="button" class="main-button-1" value="7" id="final" onclick="display('7')"></td>
+      <td><input type="button" class="main-button-1" value="8" id="final" onclick="display('8')"></td>
+      <td><input type="button" class="main-button-1" value="9" id="final" onclick="display('9')"></td>
+      <td><input type="button" class="main-button-1" value="+" id="final" onclick="display('+')"></td>
+    </tr>
+
+    <tr>
+      <td><input type="button" class="main-button-1" value="0" id="final" onclick="display('0')"></td>
+      <td><input type="button" class="main-button-1" value="00" id="final" onclick="display('00')"></td>
+      <td><input type="button" class="main-button-1" value="." id="final" onclick="display('.')"></td>
+      <td><input type="button" class="main-button-1" value="-" id="final" onclick="display('-')"></td>
+    </tr>
+
+    <tr>
+      <td colspan="2"><input type="button" class="main-button-1" value="=" id="final" onclick="solve()"></td>
+      <td><input type="button" class="main-button-1" value="C" id="final" onclick="clearScreen()"></td>
+      <td><input type="button" class="main-button-1" value="%" id="final" onclick="display('%')"></td>
+    </tr>
+  </table>
+</body>
+</html>
+<script>
+  //display
+  function display(val){
+  document.getElementById('final').value += val
+  return val
+}
+
+//solve
+function solve(){
+let x = document.getElementById('final').value
+let y = eval(x);
+document.getElementById('final').value = y
+return y
+}
+
+//clear screen
+function clearScreen(){
+  document.getElementById('final').value = ''
+}
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="weather.js"></script>
+</head>
+<body>
+    <table border="1" align="center">
+        <tr>
+            <th colspan="5" style="font-size: 20px;">WEATHER API</th>
+        </tr>
+        <th>Id</th>
+        <th>name</th>
+        <th>state</th>
+        <th>country</th>
+        <th>coord</th>
+
+        <tbody id="weather"></tbody>
+    </table>
+</body>
+</html>
+<script>
+    console.log(details)
+    MYDATA =""
+    details.forEach(x=>{
+      MYDATA+=`
+            <tr>
+                <td>${x.id}</td>
+                <td>${x.name}</td>
+                <td>${x.state}</td>
+                <td>${x.country}</td>
+                <td>${x.coord.lon}<br>${x.coord.lat}</td>
+            </tr>
+      `
+      document.querySelector('#weather').innerHTML = MYDATA
+
+    });
+</script>

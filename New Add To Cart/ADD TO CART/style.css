@@ -1,0 +1,220 @@
+.body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.navbar-brand{
+    color: white !important;
+    font-size: 20px;
+    font-weight: 700;
+}
+.main{
+    display: flex;
+    justify-content: space-around;
+}
+/* .btn:hover{
+    background-color:rgb(255, 255, 255) !important;
+} */
+.btn{
+    font-weight: 700;
+    padding-top: -40px !important;
+    display: flex;
+    align-items: center;
+    background-color: #80c4dd;
+    color: white;
+}
+.srch{
+  margin-left: 650px;
+}
+
+/* add to cart */
+
+
+.yourcart{
+  border-bottom: 1px solid #000000;
+  
+  padding: 20px;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #0d3335;
+  margin: 20px;
+  border: #fefefe;
+  color: white !important;
+  align-items: end;
+  
+}
+.cancelbtn:hover {
+  opacity: .9;
+}
+.cel{
+  border-top: 1px solid rgb(8, 8, 8) !important;
+}
+
+.cartitem{
+  padding: 60px;
+  text-align: center;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color:  #fefefe;
+  margin: 5% auto 15% auto; 
+  /* border: 1px solid #888; */
+  width: 80%; 
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #80c4dd;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+
+/* add to cart end */
+#list{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  /* background-color: #DCE0E1; */
+  padding: 62px;
+  /* padding-top: 20px; */
+  margin: 10px ;
+  background-color: cadetblue;
+}
+#list img{
+  width: 70%;
+  border-radius: 80px;
+  border: 5px solid  #0d3335;
+  margin-top: 20px;
+  /* -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+  -ms-border-radius: 80px;
+  -o-border-radius: 80px; */
+}
+#list:hover img{
+  border: 5px solid white;
+}
+.ct{ 
+  background-color:  cadetblue;
+  /* border: 1px solid black; */
+  margin-right: 25px !important;
+  box-shadow: 1px 1px 3px 2px rgba(163, 156, 156, 0.5);
+}
+.ct:hover {
+  background-color:  #0d3335;
+  border: 5px solid white;
+
+}
+.ct:hover .name{
+  color: white !important;
+}
+.ct:hover #price{
+  color: white !important;
+}
+
+#listCard li{
+  display: grid;
+  grid-template-columns: 100px repeat(3, 1fr);
+  color: black;
+  row-gap: 10px;
+  margin-bottom: 20px;
+}
+#listCard li div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#listCard li img{
+  width: 90%;
+  
+}
+#listCard button{
+ width: auto !important;
+ background-color: #f9f7f7;
+ border: none; 
+}
+#listCard .count{
+  margin: 0 10px;
+}
+.name{
+  font-weight: 700;
+  padding: 10PX;
+  font-size: 20px;
+}
+
+#price{
+  font-weight: 700;
+  padding: 10PX;
+}
+.add{
+  font-weight: 500;
+  padding: 10px 25px;
+  border-radius: 200px;
+  background-color: #0d3335;
+  color: white ;
+  border: none;
+  margin-bottom: 20px;
+  
+}
+.ct:hover .add{
+  background-color:cadetblue;
+  border: 2px solid white;
+}
